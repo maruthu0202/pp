@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>LP</title>
+  </head>
+  <body>
+    <center>
+      <h1>login page</h1>
+      <p class="h">Thankyou for visit our page</p>
+      <form id="loginForm">
+        <fieldset class="c1">
+          <label for="un"
+            >Username:<input type="text" id="un" name="un"
+          /></label>
+          <label for="p"
+            >Password:<input type="password" id="p" name="p"
+          /></label>
+          <button type="submit">Login</button>
+          <p>Otherwise <a href="r.html">Register Now?</a></p>
+        </fieldset>
+      </form>
+    </center>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const c = document.getElementById("un").value;
+          const b = document.getElementById("p").value;
+
+          if (c === "maruthu" && b === "maruthu") {
+            window.location.href = "home.html";
+          } else {
+            alert("Invalid username or password. Please try again.");
+          }
+        });
+    </script>
+  </body>
+</html>
